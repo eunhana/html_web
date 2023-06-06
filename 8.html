@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+  <title>kimjaeho - homework</title>
+  <meta charset="utf-8"><link rel="stylesheet" href="1.css"><script src="1.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="colors.js"></script>
+  <script>
+    jQuery(document).ready(function(){
+     $('.menu>li').mouseover(function(){
+      $(this).find('.submenu').stop().slideDown(200);
+     }).mouseout(function(){
+       $(this).find('.submenu').stop().slideUp(350);
+     });
+    });
+</script>
+</head>
+<body style="background-color: white; color: black;">
+  <h1><a href="index.html">Home</a></h1>
+  <nav>
+    <ul class="menu">
+      <li><a href="1.html">자기소개</a>
+      <ul class="submenu">
+        <li><a href="1.html#mbti">mbti</a></li>
+      </ul></li>
+
+      <li><a href="2.html">취미</a>
+       <ul class="submenu">
+         <li><a href="2.html#draw">그림그리기</a></li>
+         <li><a href="2.html#book">책읽기</a></li>
+         <li><a href="2.html#PlayGame">게임하기</a></li>
+         <li><a href="2.html#music">악기 연주하기</a></li>
+        </ul></li>
+
+      <li><a href="3.html">좋아하는 것</a>
+      <ul class="submenu">
+        <li><a href="3.html#anime">애니메이션</a></li>
+        <li><a href="3.html#LikeGame">게임</a></li>
+       <li><a href="3.html#VA">성우</a></li>
+      </ul></li>
+
+      <li><a href="4.html">관심있는 분야</a>
+      <ul class="submenu">
+       <li><a href="4.html#idea">아이디어</a></li>
+       <li><a href="4.html#Japanese">일본어</a></li>
+       <li><a href="4.html#dream">꿈</a></li>
+       <li><a href="4.html#game">게임</a></li>
+      </ul></li>
+      
+      <li><a href="5.html">과제</a>
+        <ul class="submenu">
+          <li><a href="5.html">1~4주차</a></li>
+          <li><a href="6.html">5~8주차</a></li>
+          <li><a href="7.html">9~12주차</a></li>
+          <li><a href="8.html">13~16주차</a></li>
+      </ul></li>
+    </ul>
+  </nav>
+  <div>
+    <iframe src="8-1.html" name="left" width="200" height="600">
+    </iframe>
+    <iframe name="mid" width="513.3" height="600">
+    </iframe>
+    <iframe name="right" width="513.3" height="600">
+    </iframe>
+  </div>
+  <div>
+    <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
+    <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
+    <button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button>
+  </div>
+</body>
+</html>

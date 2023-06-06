@@ -1,0 +1,107 @@
+h1 {
+	font-size:45px;
+	margin: 18px;
+  }
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+  }
+.main{
+	z-index: 1;
+	position:relative
+}
+.menu{
+	position:relative
+}
+.submenu{
+	z-index: 5;
+}
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	overflow-x: hidden; 
+	width: 0px auto; 
+  }
+nav{
+	width: 1250px;
+}
+div{
+	width: 1250px;
+}
+a{
+	display:block;
+	text-decoration: none;
+	color:black;
+}
+p>a {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+.menu>li{
+    float: left;
+	width: 250px;
+	height: 38px;
+	background-color: #6472c2;
+}
+.menu>li>a{
+	line-height: 38px;
+	text-align: center;
+	font-weight: bold;
+	color: black;			
+}
+.menu>li:hover>a{
+	background-color: #9b97d3;
+}
+.submenu{
+	display: none;
+}
+.submenu>li{
+	width: 250px;
+	height: 38px;
+	background-color: #a49fd3da;
+}
+.submenu>li>a{
+	line-height: 38px;
+	font-size: 14px;
+	text-align: center;
+	color: black;
+}
+.submenu>li:hover>a{
+	text-decoration: underline;
+}
+
+.night_day{
+	position: fixed;
+	bottom: 20px;
+	right: 86px;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+#scroll-to-top-btn {
+	position: fixed;
+	bottom: 20px;
+	right: 43px;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
+#scroll-to-bottom-btn {
+		position: fixed;
+		bottom: 20px;
+		right: 0px;
+		padding: 10px;
+		background-color: #333;
+		color: #fff;
+		cursor: pointer;
+}
