@@ -28,8 +28,6 @@ function nightDayHandler(self){
     Body.setBackgroundColor('white');
     Body.setColor('black');
     self.value = 'night';
-
-    Links.setColor('blue');
   }
 }
 
