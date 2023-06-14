@@ -32,17 +32,7 @@ function nightDayHandler(self){
     Links.setColor('black');
   }
 }
-
-var scrollToTopBtn = document.getElementById('scroll-to-top-btn');
 /*var scrollToBottomBtn = document.getElementById('scroll-to-bottom-btn');*/
-
-var scrollToTopBtn = document.documentElement
-function scrollToTop() {
-  scrollToTopBtn.scrollTo({
-    top: 0,
-    behavior: "smooth"
-})}
-scrollToTopBtn.addEventListener("click", scrollToTop);
 
 /*var scrollToBottomBtn = document.documentElement
 function scrollToBot() {

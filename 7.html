@@ -71,10 +71,10 @@
     </iframe>
   </div>
   <div>
-    <div><div id="clock"></div></div>
+    <div><div><div id="clock"></div></div></div>
     <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
-    <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
-    <!-- <button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button> -->
+    <button id="scroll-to-top-btn" onclick="(scrollToTop)">⏫</button>
+    <!-- <button id="scroll-to-bottom-btn" onclick="(scrollToBot)">⏬</button> -->
   </div>
   <script>
     function chg2Frame(fn1,url1,fn2,url2) {
@@ -93,6 +93,16 @@
         setTimeout("timeout(clock)", 1000);
     }
     startClock();
+
+    var scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+    function scrollToTop() {
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+      });
+    }
+
+  scrollToTopBtn.addEventListener("click", scrollToTop);
 </script>
 </body>
 </html>

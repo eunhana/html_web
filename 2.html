@@ -14,7 +14,7 @@
      });
     });
 </script>
-  </head>
+</head>
 <body style="background-color: white; color: black;">
   <h1><a href="index.html">Home</a></h1>
   <nav>
@@ -65,6 +65,15 @@
   <p id="book"><h3>책 읽기</h3><hr>
     평소 책읽을 시간이 없어서 자주 읽지는 못하지만, 책 한권을 펼쳤을 때는 주변 소리가 잘 안들리고, 영화를 보듯이 읽습니다. 또한 성우들을 굉장히 좋아하는 사람이라서, "어 이거 애니메이션/영화로 만들면 그 성우가 담당하면 좋겠는데?" 라는 생각을 하며 읽습니다.  
   </p><br>
+  <button class="accordion">최근 읽은 책</button>
+  <div class="panel">
+    <p><ol>
+      <li>어느 날 네가 내 죽음에 들어왔다.</li>
+      <li>오늘 밤, 세계에서 이 사랑이 사라진다 해도</li>
+      <li>오늘 밤, 세계에서 이 눈물이 사라진다 해도</li>
+      <li>낙원남녀</li>
+    </ol></p>
+  </div>
   <div id="PlayGame"><h3>게임하기</h3><hr><p>
   -> 게임에 관한 애정은 <a href="3.html#LikeGame" style="color: blue">여기</a>를 게임에 관한 비판은 <a href="4.html#game" style="color: blue">여기</a>를 확인하십시오
   </p></div><br>
@@ -72,10 +81,10 @@
     악기를 끝까지 한건 우쿨렐레 하나 밖에 없지만, 여러 악기를 배웠습니다. 최근 일렉기타를 배우고 있는 중입니다.
   </p></div>
   <div>
-    <div><div id="clock"></div></div>
+    <div><div><div id="clock"></div></div></div>
     <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
-    <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
-    <!-- <button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button> -->
+    <button id="scroll-to-top-btn" onclick="(scrollToTop)">⏫</button>
+    <!-- <button id="scroll-to-bottom-btn" onclick="(scrollToBot)">⏬</button> -->
   </div>
   <script>
     function startClock() {
@@ -88,6 +97,33 @@
         setTimeout("timeout(clock)", 1000);
     }
     startClock();
+
+    var scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+    function scrollToTop() {
+      window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+      });
+    }
+
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+
+</script>
+<script>
+  var accordions = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < accordions.length; i++) {
+    accordions[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
 </script>
 </body>
 </html>
