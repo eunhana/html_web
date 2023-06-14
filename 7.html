@@ -57,17 +57,42 @@
     </ul>
   </nav>
   <div>
-    <iframe src="7-1.html" name="left" width="200" height="600">
+    <ul id="left">
+      <li><a href="javascript:chg2Frame(mid,'web_hw/10week_hw_code/10w1-1_code.html',right,'web_hw/10week_hw/10w1-1.html');">10-1-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/10week_hw_code/10w1-2_code.html',right,'web_hw/10week_hw/10w1-2.html');">10-1-2 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/10week_hw_code/10w2_code.html',right,'web_hw/10week_hw/10w2.html');">10-2 과제</a></li>
+      <br>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/12week_hw_code/12w1_code.html',right,'web_hw/12week_hw/12w1.html');">12-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/12week_hw_code/12w2_code.html',right,'web_hw/12week_hw/12w2.html');">12-2 과제</a></li>
+    </ul>
+    <iframe name="mid" id="middle">
     </iframe>
-    <iframe name="mid" width="513.3" height="600">
-    </iframe>
-    <iframe name="right" width="513.3" height="600">
+    <iframe name="right" id="right">
     </iframe>
   </div>
   <div>
+    <div><div id="clock"></div></div>
     <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
     <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
-    <!--<button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button>-->
+    <!-- <button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button> -->
   </div>
+  <script>
+    function chg2Frame(fn1,url1,fn2,url2) {
+      fn1.location=url1;
+      fn2.location=url2;
+    }
+  </script>
+  <script>
+    function startClock() {
+        let clock = document.getElementById("clock");
+        timeout(clock);
+    }
+    function timeout(obj) {
+        let current = new Date();
+        obj.innerHTML = current.toLocaleTimeString();
+        setTimeout("timeout(clock)", 1000);
+    }
+    startClock();
+</script>
 </body>
 </html>

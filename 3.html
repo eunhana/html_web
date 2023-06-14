@@ -67,9 +67,22 @@
   게임과 애니메이션을 좋아하면 당연하게 좋아하게 되는 요소라고 생각하는 성우또한 굉장히 좋아합니다. 특히 김가령 성우님과 민승우 성우님을 굉장히 좋아합니다.
   </p></div>
   <div>
+    <div><div id="clock"></div></div>
     <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
     <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
     <!--<button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button> -->
   </div>
+  <script>
+    function startClock() {
+        let clock = document.getElementById("clock");
+        timeout(clock);
+    }
+    function timeout(obj) {
+        let current = new Date();
+        obj.innerHTML = current.toLocaleTimeString();
+        setTimeout("timeout(clock)", 1000);
+    }
+    startClock();
+</script>
 </body>
 </html>

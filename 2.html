@@ -72,9 +72,22 @@
     악기를 끝까지 한건 우쿨렐레 하나 밖에 없지만, 여러 악기를 배웠습니다. 최근 일렉기타를 배우고 있는 중입니다.
   </p></div>
   <div>
+    <div><div id="clock"></div></div>
     <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
     <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
     <!-- <button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button> -->
   </div>
-  </body>
+  <script>
+    function startClock() {
+        let clock = document.getElementById("clock");
+        timeout(clock);
+    }
+    function timeout(obj) {
+        let current = new Date();
+        obj.innerHTML = current.toLocaleTimeString();
+        setTimeout("timeout(clock)", 1000);
+    }
+    startClock();
+</script>
+</body>
 </html>

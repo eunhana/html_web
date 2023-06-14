@@ -86,6 +86,26 @@ p>a {
 	cursor: pointer;
 }
 
+div>div>div {
+	display: inline;
+    border: 1px solid gray;
+	width: 100px;
+	right: 57px;
+	position: fixed;
+	bottom: 63px;
+	background-color: auto;
+}
+
+#auto{
+	position: fixed;
+	bottom: 20px;
+	right: 129px;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
+}
+
 #scroll-to-top-btn {
 	position: fixed;
 	bottom: 20px;
@@ -97,11 +117,27 @@ p>a {
 }
 
 #scroll-to-bottom-btn {
-		position: fixed;
-		bottom: 20px;
-		right: 0px;
-		padding: 10px;
-		background-color: #333;
-		color: #fff;
-		cursor: pointer;
+	position: fixed;
+	bottom: 20px;
+	right: 0px;
+	padding: 10px;
+	background-color: #333;
+	color: #fff;
+	cursor: pointer;
 }
+
+#left {
+	width: 200px;
+	height: 600px;
+	float: left;
+  }
+#middle {
+	width: 513.3px;
+	height: 600px;
+	float: left;
+  }
+#right {
+	width: 513.3px;
+	height: 600px;
+	float: left;
+  }

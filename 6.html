@@ -57,17 +57,46 @@
     </ul>
   </nav>
   <div>
-    <iframe src="6-1.html" name="left" width="200" height="600">
+    <ul id="left">
+      <li><a href="javascript:chg2Frame(mid,'web_hw/5week_hw_code/5w1_code.html',right,'web_hw/5week_hw/5w1.html');">5-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/5week_hw_code/5w2_code.html',right,'web_hw/5week_hw/5w2.html');">5-2 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/5week_hw_code/5w3_code.html',right,'web_hw/5week_hw/5w3.html');">5-3 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/5week_hw_code/5w4_code.html',right,'web_hw/5week_hw/5w4.html');">5-4 과제</a></li>
+      <br>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/6week_hw_code/6w1_code.html',right,'web_hw/6week_hw/6w1.html');">6-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/6week_hw_code/6w2_code.html',right,'web_hw/6week_hw/6w2.html');">6-2 과제</a></li>
+      <br>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/7week_hw_code/7w1_code.html',right,'web_hw/7week_hw/7w1.html');">7-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/7week_hw_code/7w2_code.html',right,'web_hw/7week_hw/7w2.html');">7-2 과제</a></li>
+    </ul>
+    <iframe name="mid" id="middle">
     </iframe>
-    <iframe name="mid" width="513.3" height="600">
-    </iframe>
-    <iframe name="right" width="513.3" height="600">
+    <iframe name="right" id="right">
     </iframe>
   </div>
   <div>
+    <div><div id="clock"></div></div>
     <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
     <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
-    <!--<button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button>-->
+    <!-- <button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button> -->
   </div>
+  <script>
+    function chg2Frame(fn1,url1,fn2,url2) {
+      fn1.location=url1;
+      fn2.location=url2;
+    }
+  </script>
+  <script>
+    function startClock() {
+        let clock = document.getElementById("clock");
+        timeout(clock);
+    }
+    function timeout(obj) {
+        let current = new Date();
+        obj.innerHTML = current.toLocaleTimeString();
+        setTimeout("timeout(clock)", 1000);
+    }
+    startClock();
+</script>
 </body>
 </html>

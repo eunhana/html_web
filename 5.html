@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-  <title>kimjaeho - homework</title>
+  <title>kimjaeho - homework</title> 
   <meta charset="utf-8"><link rel="stylesheet" href="1.css"><script src="1.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="colors.js"></script>
@@ -13,7 +13,7 @@
        $(this).find('.submenu').stop().slideUp(350);
      });
     });
-</script>
+  </script>
 </head>
 <body style="background-color: white; color: black;">
   <h1><a href="index.html">Home</a></h1>
@@ -57,17 +57,55 @@
     </ul>
   </nav>
   <div>
-    <iframe src="5-1.html" name="left" width="200" height="600">
+    <ul id="left">
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w1_code.html',right,'web_hw/2week_hw/2w1.html');">2-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w2-1_code.html',right,'web_hw/2week_hw/2w2-1.html');">2-2-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w2-2_code.html',right,'web_hw/2week_hw/2w2-2.html');">2-2-2 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w3_code.html',right,'web_hw/2week_hw/2w3.html');">2-3 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w4-1_code.html',right,'web_hw/2week_hw/2w4-1.html');">2-4-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w4-2_code.html',right,'web_hw/2week_hw/2w4-2.html');">2-4-2 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w5_code.html',right,'web_hw/2week_hw/2w5.html');">2-5 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w6-1_code.html',right,'web_hw/2week_hw/2w6-1.html');">2-6-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w6-2_code.html',right,'web_hw/2week_hw/2w6-2.html');">2-6-2 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w7_code.html',right,'web_hw/2week_hw/2w7.html');">2-7 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/2week_hw_code/2w8_code.html',right,'web_hw/2week_hw/2w8.html');">2-8 과제</a></li>
+      <br>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/3week_hw_code/3w1_code.html',right,'web_hw/3week_hw/3w1.html');">3-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/3week_hw_code/3w2_code.html',right,'web_hw/3week_hw/3w2.html');">3-2 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/3week_hw_code/3w3_code.html',right,'web_hw/3week_hw/3w3.html');">3-3 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/3week_hw_code/3w4_code.html',right,'web_hw/3week_hw/3w4.html');">3-4 과제</a></li>
+      <br>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/4week_hw_code/4w1_code.html',right,'web_hw/4week_hw/4w1.html');">4-1 과제</a></li>
+      <li><a href="javascript:chg2Frame(mid,'web_hw/4week_hw_code/4w2_code.html',right,'web_hw/4week_hw/4w2.html');">4-2 과제</a></li>
+    </ul>
+    <iframe name="mid" id="middle">
     </iframe>
-    <iframe name="mid" width="513.3" height="600">
-    </iframe>
-    <iframe name="right" width="513.3" height="600">
+    <iframe name="right" id="right">
     </iframe>
   </div>
   <div>
+    <div><div id="clock"></div></div>
     <button id="night_day" value="night" onclick=" var target = nightDayHandler(this);" class="night_day">🌗</button>
     <button id="scroll-to-top-btn" onclick="f(scrollToTop)">⏫</button>
-    <!--<button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button>-->
+    <!-- <button id="scroll-to-bottom-btn" onclick="f(scrollToBot)">⏬</button> -->
   </div>
+  <script>
+    function chg2Frame(fn1,url1,fn2,url2) {
+      fn1.location=url1;
+      fn2.location=url2;
+    }
+  </script>
+  <script>
+    function startClock() {
+        let clock = document.getElementById("clock");
+        timeout(clock);
+    }
+    function timeout(obj) {
+        let current = new Date();
+        obj.innerHTML = current.toLocaleTimeString();
+        setTimeout("timeout(clock)", 1000);
+    }
+    startClock();
+</script>
 </body>
 </html>
